@@ -16,7 +16,7 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-pbr
 BuildRequires:  python2-devel
 BuildRequires:  systemd
-Requires: python-ironic-python-agent = %{version}-%{release}
+Requires: python-ironic-python-agent = %{upstream_version}
 Requires(post): systemd
 Requires(preun): systemd
 Requires(postun): systemd
