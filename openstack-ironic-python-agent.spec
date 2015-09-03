@@ -48,6 +48,8 @@ as of the Kilo OpenStack release.
 %package -n python2-ironic-python-agent
 Summary:    Python library for the ironic python agent.
 %{?python_provide:%python_provide python2-ironic-python-agent}
+# python_provide does not exist in CBS Cloud buildroot
+Provides:   python-ironic-python-agent = %{upstream_version}
 
 Requires: python-pbr
 Requires: python-babel
@@ -75,6 +77,9 @@ Python library for ironic python agent.
 
 %package -n python2-ironic-python-agent-doc
 Summary:    Documentation for ironic python agent.
+%{?python_provide:%python_provide python2-ironic-python-agent-doc}
+# python_provide does not exist in CBS Cloud buildroot
+Provides:   python-ironic-python-agent-doc = %{upstream_version}
 
 %description -n python2-ironic-python-agent-doc
 Documentation for ironic python agent.
