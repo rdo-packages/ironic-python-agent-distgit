@@ -3,12 +3,12 @@
 
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
-Version:    0.1
-Release:    0.1gite6439ca1d06a50e72b97975da9b3963ba04ba841
+Version:    1.0.0
+Release:    1
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
-Source0:    ironic-python-agent-0.1.0.dev731.tar.gz
+Source0:    https://launchpad.net/ironic-python-agent/liberty/%{version}/+download/ironic-python-agent-%{version}.tar.gz
 Source1:    openstack-ironic-python-agent.service
 
 BuildArch:  noarch
@@ -75,10 +75,7 @@ Provides:   ironic-python-agent-doc = %{upstream_version}
 Documentation for ironic python agent.
 
 %prep
-# %%autosetup -v -p 1 -n ironic-python-agent-%{upstream_version}
-# Until we have a proper release upstream we have to use a
-# pre-release source tarball
-%autosetup -v -p 1 -n ironic-python-agent-0.1.0.dev731
+%autosetup -v -p 1 -n ironic-python-agent-%{upstream_version}
 rm -rf *.egg-info
 
 # Remove the requirements file so that pbr hooks don't add it
@@ -129,6 +126,9 @@ install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{b
 
 
 %changelog
+* Fri Oct 16 2015 John Trowbridge <trown@redhat.com> 1.0.0-1
+- Update to upstream 1.0.0
+
 
 * Wed Aug 26 2015 John Trowbridge <trown@redhat.com> - 0.1.0-0.1gite6439ca1d06a50e72b97975da9b3963ba04ba841
 - Initial package build
