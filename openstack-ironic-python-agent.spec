@@ -68,6 +68,7 @@ Requires: python-pint
 Requires: python-psutil
 Requires: python-pyudev
 Requires: python-requests
+Requires: python-rtslib
 Requires: python-six
 Requires: python-stevedore
 Requires: python-wsme
