@@ -1,6 +1,8 @@
 %{?!_licensedir:%global license %%doc}
 %{!?upstream_version: %global upstream_version %{version}}
 
+%global sname ironic-python-agent
+
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
 Version:    XXX
@@ -8,7 +10,7 @@ Release:    XXX
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
-Source0:    ironic-python-agent-0.1.0.dev731.tar.gz
+Source0:    http://tarballs.openstack.org/%{sname}/%{sname}-%{version}.tar.gz
 Source1:    openstack-ironic-python-agent.service
 
 BuildArch:  noarch
