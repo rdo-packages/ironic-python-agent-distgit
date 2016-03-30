@@ -5,12 +5,12 @@
 
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
-Version:    XXX
-Release:    XXX
+Version:    1.2.0
+Release:    1%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
-Source0:    http://tarballs.openstack.org/%{sname}/%{sname}-%{version}.tar.gz
+Source0:    http://tarballs.openstack.org/%{sname}/%{sname}-%{version}%{?milestone}.tar.gz
 Source1:    openstack-ironic-python-agent.service
 
 BuildArch:  noarch
@@ -138,3 +138,5 @@ install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{b
 
 %postun
 %systemd_postun_with_restart openstack-ironic-python-agent.service
+* Wed Mar 30 2016 RDO <rdo-list@redhat.com> 1.2.0-0.1
+- RC1 Rebuild for Mitaka RC1 
