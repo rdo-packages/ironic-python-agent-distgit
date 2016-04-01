@@ -6,7 +6,7 @@
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
 Version:    1.2.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
@@ -56,6 +56,7 @@ Provides:   python-ironic-python-agent = %{upstream_version}
 Requires: python-pbr
 Requires: python-babel
 Requires: python-eventlet
+Requires: python-ironic-lib
 Requires: python-iso8601
 Requires: python-netifaces
 Requires: python-oslo-config
@@ -138,5 +139,10 @@ install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{b
 
 %postun
 %systemd_postun_with_restart openstack-ironic-python-agent.service
+
+%changelog
+* Wed Apr 06 2016 Dmitry Tantsur <dtantsur AT redhat.com> 1.2.0-2
+- Depend on ironic-lib (new dependency in Mitaka)
+
 * Wed Mar 30 2016 RDO <rdo-list@redhat.com> 1.2.0-0.1
 - RC1 Rebuild for Mitaka RC1 
