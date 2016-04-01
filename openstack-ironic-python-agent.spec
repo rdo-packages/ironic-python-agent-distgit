@@ -54,6 +54,7 @@ Provides:   python-ironic-python-agent = %{upstream_version}
 Requires: python-pbr
 Requires: python-babel
 Requires: python-eventlet
+Requires: python-ironic-lib
 Requires: python-iso8601
 Requires: python-netifaces
 Requires: python-oslo-config
