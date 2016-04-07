@@ -6,5 +6,7 @@ After=network-online.target
 ExecStart=/usr/bin/ironic-python-agent
 Restart=always
 RestartSec=30s
+StandardOutput=kmsg+console
+StandardError=inherit
 [Install]
 WantedBy=multi-user.target
