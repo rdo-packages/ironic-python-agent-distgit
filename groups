@@ -1,5 +1,5 @@
-# UUID          Group Name
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
-b1a6dad8adc630a4961161765d8c06d60acc541f       	ironic-python-agent-distgit-core
-518da7b362fd007f5271565f723a2b241553a9d6        	ironic-python-agent-distgit-ptl
-global:Registered-Users		Registered Users
+# UUID                                  	Group Name
+#
+518da7b362fd007f5271565f723a2b241553a9d6	openstack/ironic-python-agent-distgit-ptl
+b1a6dad8adc630a4961161765d8c06d60acc541f	ironic-python-agent-distgit-core
+global:Registered-Users                 	Registered Users
