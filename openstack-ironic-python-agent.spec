@@ -26,7 +26,6 @@ Requires(postun): systemd
 # TODO(trown) when the following packages are available, package for py3:
 # python3-eventlet
 # python3-oslo-concurrency
-# python3-oslo-i18n
 # python3-oslo-log
 # python3-oslo-serialization
 # python3-oslo-service
@@ -54,14 +53,12 @@ Summary:    Python library for the ironic python agent.
 Provides:   python-ironic-python-agent = %{upstream_version}
 
 Requires: python-pbr
-Requires: python-babel
 Requires: python-eventlet
 Requires: python-ironic-lib
 Requires: python-iso8601
 Requires: python-netifaces
 Requires: python-oslo-config
 Requires: python-oslo-concurrency
-Requires: python-oslo-i18n
 Requires: python-oslo-log
 Requires: python-oslo-serialization
 Requires: python-oslo-service
