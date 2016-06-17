@@ -8,7 +8,7 @@ Release:    1%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
-Source0:    https://launchpad.net/ironic-python-agent/liberty/%{version}/+download/ironic-python-agent-%{version}.tar.gz
+Source0:    https://tarballs.openstack.org/ironic-python-agent/ironic-python-agent-%{version}.tar.gz
 Source1:    openstack-ironic-python-agent.service
 
 BuildArch:  noarch
