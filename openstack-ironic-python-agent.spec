@@ -10,7 +10,7 @@ Release:    XXX
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
-Source0:    http://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz
+Source0:    https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz
 Source1:    openstack-ironic-python-agent.service
 
 BuildArch:  noarch
