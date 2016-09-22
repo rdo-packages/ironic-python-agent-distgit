@@ -5,7 +5,7 @@
 
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
-Version:    1.4.0
+Version:    1.5.0
 Release:    1%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
@@ -138,6 +138,9 @@ install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{b
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+* Thu Sep 22 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.5.0-1
+- Update to 1.5.0
+
 * Wed Sep 14 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.4.0-1
 - Update to 1.4.0
 
