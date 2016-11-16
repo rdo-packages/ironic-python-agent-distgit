@@ -18,6 +18,29 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-pbr
 BuildRequires:  python2-devel
 BuildRequires:  systemd
+# These packages are required for running unit tests
+BuildRequires: python-eventlet
+BuildRequires: python-ironic-lib
+BuildRequires: python-iso8601
+BuildRequires: python-mock
+BuildRequires: python-netifaces
+BuildRequires: python-oslo-config
+BuildRequires: python-oslo-concurrency
+BuildRequires: python-oslo-log
+BuildRequires: python-oslo-serialization
+BuildRequires: python-oslo-service
+BuildRequires: python-oslo-utils
+BuildRequires: python-os-testr
+BuildRequires: python-pecan
+BuildRequires: python-pint
+BuildRequires: python-psutil
+BuildRequires: python-pyudev
+BuildRequires: python-requests
+BuildRequires: python-rtslib
+BuildRequires: python-six
+BuildRequires: python-stevedore
+BuildRequires: python-wsme
+
 Requires: python-ironic-python-agent = %{upstream_version}
 Requires(post): systemd
 Requires(preun): systemd
@@ -111,6 +134,9 @@ mkdir -p %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 
 install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{buildroot}/%{_sysconfdir}/ironic-python-agent/agent.conf
+
+%check
+ostestr --path ironic_python_agent/tests/unit
 
 %files
 %doc README.rst
