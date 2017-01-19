@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab895d6_56606535",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-01-19T23:43:30Z",
+      "side": 1,
+      "message": "Looks like there\u0027s [WD] issue with unit tests added in this commit, I\u0027ll make %check non-fatal as a quickfix",
+      "revId": "c5c1874723de37c530cbd183010ba197ab0efd60",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
