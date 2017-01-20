@@ -16,6 +16,24 @@
       "revId": "c5c1874723de37c530cbd183010ba197ab0efd60",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dab895d6_51ff8f01",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-01-20T08:45:20Z",
+      "side": 1,
+      "message": "Looking at the error message, it looks like the unit test is expecting the system to have an active IPv6 stack. This is not the case in the DLRN environment, where IPv6 is disabled.\n\nI wonder if we should still keep IPv6 disabled there :-?",
+      "parentUuid": "dab895d6_56606535",
+      "revId": "c5c1874723de37c530cbd183010ba197ab0efd60",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
