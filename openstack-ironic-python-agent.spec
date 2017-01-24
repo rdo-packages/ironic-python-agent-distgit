@@ -137,7 +137,7 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{buildroot}/%{_sysconfdir}/ironic-python-agent/agent.conf
 
 %check
-ostestr --path ironic_python_agent/tests/unit || :
+ostestr --path ironic_python_agent/tests/unit
 
 %files
 %doc README.rst
