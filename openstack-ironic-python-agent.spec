@@ -81,12 +81,13 @@ Requires: python-eventlet
 Requires: python-ironic-lib
 Requires: python-iso8601
 Requires: python-netifaces
-Requires: python-oslo-config
-Requires: python-oslo-concurrency
-Requires: python-oslo-log
-Requires: python-oslo-serialization
-Requires: python-oslo-service
-Requires: python-oslo-utils
+Requires: python-netaddr >= 0.7.13
+Requires: python-oslo-config >= 2:3.14.0
+Requires: python-oslo-concurrency >= 3.8.0
+Requires: python-oslo-log >= 3.11.0
+Requires: python-oslo-serialization >= 1.10.0
+Requires: python-oslo-service >= 1.10.0
+Requires: python-oslo-utils >= 3.18.0
 Requires: python-pecan
 Requires: python-pint
 Requires: python-psutil
@@ -94,7 +95,7 @@ Requires: python-pyudev
 Requires: python-requests
 Requires: python-rtslib
 Requires: python-six
-Requires: python-stevedore
+Requires: python-stevedore >= 1.17.1
 Requires: python-wsme
 
 %description -n python2-ironic-python-agent
