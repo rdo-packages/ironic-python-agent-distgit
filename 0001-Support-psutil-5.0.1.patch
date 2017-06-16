@@ -1,0 +1,61 @@
+From 8fa28d6dfbbcb0665b33cb226a42162afb9733ce Mon Sep 17 00:00:00 2001
+From: Mario Villaplana <mario.villaplana@gmail.com>
+Date: Tue, 24 Jan 2017 22:59:46 +0000
+Subject: [PATCH] Support psutil 5.0.1
+
+Backport notice: followup removed support for older psutil, this backport keeps compatibility for older releases for environments which want to run newer versions than frozen upper-constraints on stable branch.
+
+Original master (Ocata) message:
+An upper-constraints update to psutil caused IPA to start using psutil
+5.0.1. We had a hard-coded assumption that psutil would be major version
+1 or 2. This allows us to use the updated psutil and attempts to simply
+fail gracefully if an unrecognized psutil version is used.
+
+Change-Id: Ibe072440159561b34a29b478d955876e5fb7f103
+Closes-Bug: 1659137
+(cherry picked from commit e4919e04aa250b51e351c4e9dbfb3761f5f93a70)
+---
+ ironic_python_agent/hardware.py                 | 6 ++++++
+ ironic_python_agent/tests/unit/test_hardware.py | 8 ++++----
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+
+diff --git a/ironic_python_agent/hardware.py b/ironic_python_agent/hardware.py
+index 9ea7258..be19878 100644
+--- a/ironic_python_agent/hardware.py
++++ b/ironic_python_agent/hardware.py
+@@ -481,6 +481,12 @@ class GenericHardwareManager(HardwareManager):
+             total = int(psutil.TOTAL_PHYMEM)
+         elif psutil.version_info[0] == 2:
+             total = int(psutil.phymem_usage().total)
++        elif psutil.version_info[0] == 5:
++            total = int(psutil.virtual_memory().total)
++        else:
++            total = None
++            LOG.warning("Cannot fetch total memory size: unsupported psutil "
++                        "version %s", psutil.version_info[0])
+ 
+         try:
+             out, _e = utils.execute("dmidecode --type 17 | grep Size",
+diff --git a/ironic_python_agent/tests/unit/test_hardware.py b/ironic_python_agent/tests/unit/test_hardware.py
+index 5048304..66500d2 100644
+--- a/ironic_python_agent/tests/unit/test_hardware.py
++++ b/ironic_python_agent/tests/unit/test_hardware.py
+@@ -444,11 +444,11 @@ class TestGenericHardwareManager(test_base.BaseTestCase):
+         self.assertEqual(12, cpus.count)
+         self.assertEqual('x86_64', cpus.architecture)
+ 
+-    @mock.patch('psutil.version_info', (2, 0))
+-    @mock.patch('psutil.phymem_usage', autospec=True)
++    @mock.patch('psutil.version_info', (5, 0))
++    @mock.patch('psutil.virtual_memory', autospec=True)
+     @mock.patch.object(utils, 'execute')
+-    def test_get_memory(self, mocked_execute, mocked_usage):
+-        mocked_usage.return_value = mock.Mock(total=3952 * 1024 * 1024)
++    def test_get_memory(self, mocked_execute, mocked_virtmem):
++        mocked_virtmem.return_value.total = 3952 * 1024 * 1024
+         mocked_execute.return_value = (
+             ("Foo\nSize: 2048 MB\nSize: 2 GB\n"
+              "Installed Size: Not Installed\n"
+-- 
+2.9.4
+
