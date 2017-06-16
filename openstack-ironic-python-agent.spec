@@ -6,14 +6,17 @@
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
 Version:    1.2.3
-Release:    1%{?dist}
+Release:    2%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
 Source0:    http://tarballs.openstack.org/%{sname}/%{sname}-%{version}%{?milestone}.tar.gz
 Source1:    openstack-ironic-python-agent.service
 
+Patch001:   0001-Support-psutil-5.0.1.patch
+
 BuildArch:  noarch
+BuildRequires:  git
 BuildRequires:  python-setuptools
 BuildRequires:  python-pbr
 BuildRequires:  python2-devel
@@ -89,7 +92,7 @@ Provides:   python-ironic-python-agent-doc = %{upstream_version}
 Documentation for ironic python agent.
 
 %prep
-%autosetup -v -p 1 -n ironic-python-agent-%{upstream_version}
+%autosetup -v -p 1 -n ironic-python-agent-%{upstream_version} -S git
 
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
@@ -141,6 +144,9 @@ install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{b
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+* Fri Jun 16 2017 Alfredo Moralejo <amoralej@redhat.com> 1.2.3-2
+- Added support for psutils >= 5.0.1
+
 * Wed Jun 22 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.2.3-1
 - Update to 1.2.3
 
