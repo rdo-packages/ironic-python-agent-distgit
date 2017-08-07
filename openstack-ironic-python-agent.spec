@@ -126,7 +126,6 @@ rm -rf {test-,}requirements.txt tools/{pip,test}-requires
 # TODO(trown) build the docs as below once we either remove the upstream
 # requirement on python-sphinxcontrib-pecanwsme, or it exists in rawhide.
 # For now, we will just include the raw restructured text.
-# export PYTHONPATH="$( pwd ):$PYTHONPATH"
 # pushd doc
 # sphinx-build -b html -d build/doctrees  source build/html
 # popd
