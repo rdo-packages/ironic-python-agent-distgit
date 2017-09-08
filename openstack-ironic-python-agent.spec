@@ -32,6 +32,7 @@ BuildRequires: python-oslo-service
 BuildRequires: python-oslo-utils
 BuildRequires: python-oslotest
 BuildRequires: python-os-testr
+BuildRequires: python-stestr
 BuildRequires: python-pecan
 BuildRequires: python-pint
 BuildRequires: python-psutil
