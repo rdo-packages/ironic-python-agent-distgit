@@ -43,9 +43,7 @@ BuildRequires: python-stevedore
 BuildRequires: python-wsme
 
 Requires: python-ironic-python-agent = %{upstream_version}
-Requires(post): systemd
-Requires(preun): systemd
-Requires(postun): systemd
+%{?systemd_requires}
 
 # TODO(trown) when the following packages are available, package for py3:
 # python3-eventlet
