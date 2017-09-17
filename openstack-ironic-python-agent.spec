@@ -41,6 +41,7 @@ BuildRequires: python-rtslib
 BuildRequires: python-six
 BuildRequires: python-stevedore
 BuildRequires: python-wsme
+BuildRequires: openstack-macros
 
 Requires: python-ironic-python-agent = %{upstream_version}
 Requires(post): systemd
@@ -115,7 +116,7 @@ Documentation for ironic python agent.
 
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
-rm -rf {test-,}requirements.txt tools/{pip,test}-requires
+%py_req_cleanup
 
 %build
 %{__python2} setup.py build
