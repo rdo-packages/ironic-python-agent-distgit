@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_67ddc542",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2017-10-05T11:36:37Z",
+      "side": 1,
+      "message": "... and this is a stupid decision (ditto for tox)",
+      "range": {
+        "startLine": 45,
+        "startChar": 13,
+        "endLine": 45,
+        "endChar": 60
+      },
+      "revId": "b8143592b3978423f81c95881fbf7c2cd87db8f5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
