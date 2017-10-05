@@ -42,6 +42,10 @@ BuildRequires: python-six
 BuildRequires: python-stevedore
 BuildRequires: python-wsme
 BuildRequires: openstack-macros
+# In Fedora, the ostestr binary is in the python3 subpackage
+%if 0%{?fedora}
+BuildRequires: python3-os-testr
+%endif
 
 Requires: python-ironic-python-agent = %{upstream_version}
 %{?systemd_requires}
