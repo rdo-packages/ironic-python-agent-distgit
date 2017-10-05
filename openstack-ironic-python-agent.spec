@@ -31,7 +31,6 @@ BuildRequires: python-oslo-serialization
 BuildRequires: python-oslo-service
 BuildRequires: python-oslo-utils
 BuildRequires: python-oslotest
-BuildRequires: python-os-testr
 BuildRequires: python-pecan
 BuildRequires: python-pint
 BuildRequires: python-psutil
@@ -42,6 +41,8 @@ BuildRequires: python-six
 BuildRequires: python-stevedore
 BuildRequires: python-wsme
 BuildRequires: openstack-macros
+# In Fedora, the ostestr binary is in the python3 subpackage, so using binary as BR
+BuildRequires: /usr/bin/ostestr
 
 Requires: python-ironic-python-agent = %{upstream_version}
 %{?systemd_requires}
