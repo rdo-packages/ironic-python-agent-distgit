@@ -14,31 +14,31 @@ Source0:    https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}
 Source1:    openstack-ironic-python-agent.service
 
 BuildArch:  noarch
-BuildRequires:  python-setuptools
-BuildRequires:  python-pbr
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-pbr
 BuildRequires:  python2-devel
 BuildRequires:  systemd
 # These packages are required for running unit tests
-BuildRequires: python-eventlet
+BuildRequires: python2-eventlet
 BuildRequires: python-ironic-lib
-BuildRequires: python-iso8601
-BuildRequires: python-mock
+BuildRequires: python2-iso8601
+BuildRequires: python2-mock
 BuildRequires: python-netifaces
-BuildRequires: python-oslo-config
-BuildRequires: python-oslo-concurrency
-BuildRequires: python-oslo-log
-BuildRequires: python-oslo-serialization
-BuildRequires: python-oslo-service
-BuildRequires: python-oslo-utils
-BuildRequires: python-oslotest
-BuildRequires: python-pecan
+BuildRequires: python2-oslo-config
+BuildRequires: python2-oslo-concurrency
+BuildRequires: python2-oslo-log
+BuildRequires: python2-oslo-serialization
+BuildRequires: python2-oslo-service
+BuildRequires: python2-oslo-utils
+BuildRequires: python2-oslotest
+BuildRequires: python2-pecan
 BuildRequires: python-pint
-BuildRequires: python-psutil
+BuildRequires: python2-psutil
 BuildRequires: python-pyudev
-BuildRequires: python-requests
+BuildRequires: python2-requests
 BuildRequires: python-rtslib
-BuildRequires: python-six
-BuildRequires: python-stevedore
+BuildRequires: python2-six
+BuildRequires: python2-stevedore
 BuildRequires: python-wsme
 BuildRequires: openstack-macros
 # In Fedora, the ostestr binary is in the python3 subpackage, so using binary as BR
@@ -76,26 +76,26 @@ Summary:    Python library for the ironic python agent.
 # python_provide does not exist in CBS Cloud buildroot
 Provides:   python-ironic-python-agent = %{upstream_version}
 
-Requires: python-pbr
-Requires: python-eventlet
+Requires: python2-pbr
+Requires: python2-eventlet
 Requires: python-ironic-lib >= 2.5.0
-Requires: python-iso8601
+Requires: python2-iso8601
 Requires: python-netifaces
-Requires: python-netaddr >= 0.7.13
-Requires: python-oslo-config >= 2:4.0.0
-Requires: python-oslo-concurrency >= 3.8.0
-Requires: python-oslo-log >= 3.22.0
-Requires: python-oslo-serialization >= 1.10.0
-Requires: python-oslo-service >= 1.10.0
-Requires: python-oslo-utils >= 3.20.0
-Requires: python-pecan
+Requires: python2-netaddr >= 0.7.18
+Requires: python2-oslo-config >= 2:5.1.0
+Requires: python2-oslo-concurrency >= 3.25.0
+Requires: python2-oslo-log >= 3.36.0
+Requires: python2-oslo-serialization >= 2.18.0
+Requires: python2-oslo-service >= 1.24.0
+Requires: python2-oslo-utils >= 3.33.0
+Requires: python2-pecan
 Requires: python-pint
-Requires: python-psutil
+Requires: python2-psutil
 Requires: python-pyudev
-Requires: python-requests
+Requires: python2-requests
 Requires: python-rtslib
-Requires: python-six
-Requires: python-stevedore >= 1.20.0
+Requires: python2-six
+Requires: python2-stevedore >= 1.20.0
 Requires: python-wsme
 
 %description -n python2-ironic-python-agent
