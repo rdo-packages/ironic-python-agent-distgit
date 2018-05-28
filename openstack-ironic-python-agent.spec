@@ -177,3 +177,4 @@ ostestr --path ironic_python_agent/tests/unit
 * Tue Aug 22 2017 Alfredo Moralejo <amoralej@redhat.com> 2.2.0-1
 - Update to 2.2.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic-python-agent/commit/?id=4edda4842392abebc0531f79e838047c6b97be16
