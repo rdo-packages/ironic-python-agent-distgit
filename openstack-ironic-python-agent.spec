@@ -78,12 +78,12 @@ Provides:   python-ironic-python-agent = %{upstream_version}
 
 Requires: python2-pbr
 Requires: python2-eventlet
-Requires: python-ironic-lib >= 2.5.0
+Requires: python-ironic-lib >= 2.14.0
 Requires: python2-iso8601
 Requires: python-netifaces
 Requires: python2-netaddr >= 0.7.18
-Requires: python2-oslo-config >= 2:5.1.0
-Requires: python2-oslo-concurrency >= 3.25.0
+Requires: python2-oslo-config >= 2:5.2.0
+Requires: python2-oslo-concurrency >= 3.26.0
 Requires: python2-oslo-log >= 3.36.0
 Requires: python2-oslo-serialization >= 2.18.0
 Requires: python2-oslo-service >= 1.24.0
