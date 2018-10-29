@@ -1,3 +1,14 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pyver %{python3_pkgversion}
+%else
+%global pyver 2
+%endif
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
+# End of macros for py2/py3 compatibility
 %{?!_licensedir:%global license %%doc}
 %{!?upstream_version: %global upstream_version %{version}}
 
@@ -14,49 +25,46 @@ Source0:    https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}
 Source1:    openstack-ironic-python-agent.service
 
 BuildArch:  noarch
-BuildRequires:  python2-setuptools
-BuildRequires:  python2-pbr
-BuildRequires:  python2-devel
+BuildRequires:  python%{pyver}-setuptools
+BuildRequires:  python%{pyver}-pbr
+BuildRequires:  python%{pyver}-devel
 BuildRequires:  systemd
 # These packages are required for running unit tests
-BuildRequires: python2-eventlet
-BuildRequires: python-ironic-lib
-BuildRequires: python2-iso8601
-BuildRequires: python2-mock
-BuildRequires: python-netifaces
-BuildRequires: python2-oslo-config
-BuildRequires: python2-oslo-concurrency
-BuildRequires: python2-oslo-log
-BuildRequires: python2-oslo-serialization
-BuildRequires: python2-oslo-service
-BuildRequires: python2-oslo-utils
-BuildRequires: python2-oslotest
-BuildRequires: python2-pecan
-BuildRequires: python-pint
-BuildRequires: python2-psutil
-BuildRequires: python-pyudev
-BuildRequires: python2-requests
-BuildRequires: python-rtslib
-BuildRequires: python2-six
-BuildRequires: python2-stevedore
-BuildRequires: python-wsme
+BuildRequires: python%{pyver}-eventlet
+BuildRequires: python%{pyver}-ironic-lib
+BuildRequires: python%{pyver}-iso8601
+BuildRequires: python%{pyver}-mock
+BuildRequires: python%{pyver}-oslo-config
+BuildRequires: python%{pyver}-oslo-concurrency
+BuildRequires: python%{pyver}-oslo-log
+BuildRequires: python%{pyver}-oslo-serialization
+BuildRequires: python%{pyver}-oslo-service
+BuildRequires: python%{pyver}-oslo-utils
+BuildRequires: python%{pyver}-oslotest
+BuildRequires: python%{pyver}-pecan
+BuildRequires: python%{pyver}-psutil
+BuildRequires: python%{pyver}-requests
+BuildRequires: python%{pyver}-six
+BuildRequires: python%{pyver}-stevedore
+BuildRequires: python%{pyver}-wsme
 BuildRequires: openstack-macros
 # In Fedora, the ostestr binary is in the python3 subpackage, so using binary as BR
-BuildRequires: /usr/bin/ostestr
+BuildRequires: python%{pyver}-os-testr
+# Handle python2 exception
+%if %{pyver} == 2
+BuildRequires: python-netifaces
+BuildRequires: python-pint
+BuildRequires: python-pyudev
+BuildRequires: python-rtslib
+%else
+BuildRequires: python%{pyver}-netifaces
+BuildRequires: python%{pyver}-pint
+BuildRequires: python%{pyver}-pyudev
+BuildRequires: python%{pyver}-rtslib
+%endif
 
-Requires: python-ironic-python-agent = %{upstream_version}
+Requires: python%{pyver}-ironic-python-agent = %{upstream_version}
 %{?systemd_requires}
-
-# TODO(trown) when the following packages are available, package for py3:
-# python3-eventlet
-# python3-oslo-concurrency
-# python3-oslo-log
-# python3-oslo-serialization
-# python3-oslo-service
-# python3-oslo-utils
-# python3-pecan
-# python3-pint
-# python3-wsme
 
 %description
 An agent for controlling and deploying Ironic controlled bare metal nodes.
@@ -70,44 +78,49 @@ deployment process.
 The ironic-python-agent may also be used with the original Ironic pxe drivers
 as of the Kilo OpenStack release.
 
-%package -n python2-ironic-python-agent
+%package -n python%{pyver}-ironic-python-agent
 Summary:    Python library for the ironic python agent.
-%{?python_provide:%python_provide python2-ironic-python-agent}
-# python_provide does not exist in CBS Cloud buildroot
-Provides:   python-ironic-python-agent = %{upstream_version}
+%{?python_provide:%python_provide python%{pyver}-ironic-python-agent}
 
-Requires: python2-pbr
-Requires: python2-eventlet
-Requires: python-ironic-lib >= 2.14.0
-Requires: python2-iso8601
+Requires: python%{pyver}-pbr
+Requires: python%{pyver}-eventlet
+Requires: python%{pyver}-ironic-lib >= 2.14.0
+Requires: python%{pyver}-iso8601
+Requires: python%{pyver}-netaddr >= 0.7.18
+Requires: python%{pyver}-oslo-config >= 2:5.2.0
+Requires: python%{pyver}-oslo-concurrency >= 3.26.0
+Requires: python%{pyver}-oslo-log >= 3.36.0
+Requires: python%{pyver}-oslo-serialization >= 2.18.0
+Requires: python%{pyver}-oslo-service >= 1.24.0
+Requires: python%{pyver}-oslo-utils >= 3.33.0
+Requires: python%{pyver}-pecan
+Requires: python%{pyver}-psutil
+Requires: python%{pyver}-requests
+Requires: python%{pyver}-six
+Requires: python%{pyver}-stevedore >= 1.20.0
+Requires: python%{pyver}-wsme
+# Handle python2 exception
+%if %{pyver} == 2
 Requires: python-netifaces
-Requires: python2-netaddr >= 0.7.18
-Requires: python2-oslo-config >= 2:5.2.0
-Requires: python2-oslo-concurrency >= 3.26.0
-Requires: python2-oslo-log >= 3.36.0
-Requires: python2-oslo-serialization >= 2.18.0
-Requires: python2-oslo-service >= 1.24.0
-Requires: python2-oslo-utils >= 3.33.0
-Requires: python2-pecan
 Requires: python-pint
-Requires: python2-psutil
 Requires: python-pyudev
-Requires: python2-requests
 Requires: python-rtslib
-Requires: python2-six
-Requires: python2-stevedore >= 1.20.0
-Requires: python-wsme
+%else
+Requires: python%{pyver}-netifaces
+Requires: python%{pyver}-pint
+Requires: python%{pyver}-pyudev
+Requires: python%{pyver}-rtslib
+%endif
 
-%description -n python2-ironic-python-agent
+%description -n python%{pyver}-ironic-python-agent
 Python library for ironic python agent.
 
-%package -n python2-ironic-python-agent-doc
+%package -n python-ironic-python-agent-doc
 Summary:    Documentation for ironic python agent.
-%{?python_provide:%python_provide python2-ironic-python-agent-doc}
-# python_provide does not exist in CBS Cloud buildroot
-Provides:   python-ironic-python-agent-doc = %{upstream_version}
+BuildRequires: python%{pyver}-sphinx
+BuildRequires: python%{pyver}-openstackdocstheme
 
-%description -n python2-ironic-python-agent-doc
+%description -n python-ironic-python-agent-doc
 Documentation for ironic python agent.
 
 %prep
@@ -118,17 +131,13 @@ Documentation for ironic python agent.
 %py_req_cleanup
 
 %build
-%{__python2} setup.py build
+%{pyver_build}
 
 %install
-%{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
+%{pyver_install}
 
-# TODO(trown) build the docs as below once we either remove the upstream
-# requirement on python-sphinxcontrib-pecanwsme, or it exists in rawhide.
-# For now, we will just include the raw restructured text.
-# pushd doc
-# sphinx-build -b html -d build/doctrees  source build/html
-# popd
+export PYTHONPATH=.
+sphinx-build-%{pyver} -b html -d doc/build/doctrees doc/source doc/build/html
 
 # install systemd scripts
 mkdir -p %{buildroot}%{_unitdir}
@@ -146,13 +155,13 @@ ostestr --path ironic_python_agent/tests/unit
 %{_bindir}/ironic-python-agent
 %{_unitdir}/openstack-ironic-python-agent.service
 
-%files -n python2-ironic-python-agent
+%files -n python%{pyver}-ironic-python-agent
 %license LICENSE
-%{python2_sitelib}/ironic_python_agent
-%{python2_sitelib}/ironic_python_agent*.egg-info
+%{pyver_sitelib}/ironic_python_agent
+%{pyver_sitelib}/ironic_python_agent*.egg-info
 
-%files -n python2-ironic-python-agent-doc
-%doc doc/source
+%files -n python-ironic-python-agent-doc
+%doc doc/build/html
 %license LICENSE
 
 %post
