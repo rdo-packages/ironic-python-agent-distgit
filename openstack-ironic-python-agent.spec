@@ -12,6 +12,7 @@
 %{?!_licensedir:%global license %%doc}
 %{!?upstream_version: %global upstream_version %{version}}
 
+%global with_doc 1
 %global sname ironic-python-agent
 
 Name:       openstack-ironic-python-agent
@@ -114,6 +115,7 @@ Requires: python%{pyver}-rtslib
 %description -n python%{pyver}-ironic-python-agent
 Python library for ironic python agent.
 
+%if 0%{?with_doc}
 %package -n python-ironic-python-agent-doc
 Summary:    Documentation for ironic python agent.
 BuildRequires: python%{pyver}-sphinx
@@ -123,6 +125,7 @@ BuildRequires: python%{pyver}-openstackdocstheme
 
 %description -n python-ironic-python-agent-doc
 Documentation for ironic python agent.
+%endif
 
 %prep
 %autosetup -v -p 1 -n ironic-python-agent-%{upstream_version}
@@ -137,10 +140,12 @@ Documentation for ironic python agent.
 %install
 %{pyver_install}
 
+%if 0%{?with_doc}
 export PYTHONPATH=.
 sphinx-build-%{pyver} -b html -d doc/build/doctrees doc/source doc/build/html
 # Remove build docs leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 
 # install systemd scripts
 mkdir -p %{buildroot}%{_unitdir}
@@ -165,9 +170,11 @@ ostestr --path ironic_python_agent/tests/unit
 %{pyver_sitelib}/ironic_python_agent
 %{pyver_sitelib}/ironic_python_agent*.egg-info
 
+%if 0%{?with_doc}
 %files -n python-ironic-python-agent-doc
 %doc doc/build/html
 %license LICENSE
+%endif
 
 %post
 %systemd_post openstack-ironic-python-agent.service
