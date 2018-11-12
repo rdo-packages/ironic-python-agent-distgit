@@ -63,7 +63,7 @@ BuildRequires: python%{pyver}-pyudev
 BuildRequires: python%{pyver}-rtslib
 %endif
 
-Requires: python%{pyver}-ironic-python-agent = %{upstream_version}
+Requires: python%{pyver}-ironic-python-agent = %{version}-%{release}
 %{?systemd_requires}
 
 %description
