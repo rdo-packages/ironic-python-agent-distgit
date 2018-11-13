@@ -186,3 +186,4 @@ ostestr --path ironic_python_agent/tests/unit
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic-python-agent/commit/?id=0655a18bdd34560062316df13e9e03643a300bc1
