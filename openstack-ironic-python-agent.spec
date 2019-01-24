@@ -112,6 +112,11 @@ Requires: python%{pyver}-pyudev
 Requires: python%{pyver}-rtslib
 %endif
 
+%if 0%{?rhel} > 7
+# RHEL8 requires a network-scripts package for ifcfg backwards compatibility
+Requires:   network-scripts
+%endif
+
 %description -n python%{pyver}-ironic-python-agent
 Python library for ironic python agent.
 
