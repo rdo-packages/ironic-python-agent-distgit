@@ -46,6 +46,30 @@
       "revId": "1cb05a311b18c880565508134744bc83f439dcea",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ad0253b_193b4fd3",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-02-01T06:29:21Z",
+      "side": 1,
+      "message": "hmm i meant for future fedoras only, ok can be added when we move to f29.",
+      "parentUuid": "5ad0253b_7b691c8b",
+      "range": {
+        "startLine": 116,
+        "startChar": 2,
+        "endLine": 116,
+        "endChar": 7
+      },
+      "revId": "1cb05a311b18c880565508134744bc83f439dcea",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
