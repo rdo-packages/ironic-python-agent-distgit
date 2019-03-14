@@ -49,7 +49,7 @@ BuildRequires: python%{pyver}-six
 BuildRequires: python%{pyver}-stevedore
 BuildRequires: python%{pyver}-wsme
 BuildRequires: openstack-macros
-BuildRequires: python%{pyver}-os-testr
+BuildRequires: python%{pyver}-stestr
 # Handle python2 exception
 %if %{pyver} == 2
 BuildRequires: python-netifaces
@@ -84,7 +84,7 @@ Summary:    Python library for the ironic python agent.
 
 Requires: python%{pyver}-pbr
 Requires: python%{pyver}-eventlet
-Requires: python%{pyver}-ironic-lib >= 2.14.0
+Requires: python%{pyver}-ironic-lib >= 2.16.0
 Requires: python%{pyver}-iso8601
 Requires: python%{pyver}-netaddr >= 0.7.18
 Requires: python%{pyver}-oslo-config >= 2:5.2.0
@@ -161,7 +161,7 @@ install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{b
 %check
 
 export PYTHON=%{pyver_bin}
-ostestr --path ironic_python_agent/tests/unit
+stestr-%{pyver} --test-path ironic_python_agent/tests/unit run
 
 %files
 %doc README.rst
