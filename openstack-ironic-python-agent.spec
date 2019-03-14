@@ -84,7 +84,7 @@ Summary:    Python library for the ironic python agent.
 
 Requires: python%{pyver}-pbr
 Requires: python%{pyver}-eventlet
-Requires: python%{pyver}-ironic-lib >= 2.14.0
+Requires: python%{pyver}-ironic-lib >= 2.16.0
 Requires: python%{pyver}-iso8601
 Requires: python%{pyver}-netaddr >= 0.7.18
 Requires: python%{pyver}-oslo-config >= 2:5.2.0
