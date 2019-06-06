@@ -17,7 +17,7 @@
 
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
-Version:    3.6.0
+Version:    3.6.1
 Release:    1%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
@@ -191,6 +191,9 @@ stestr-%{pyver} --test-path ironic_python_agent/tests/unit run
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+* Thu Jun 06 2019 RDO <dev@lists.rdoproject.org> 3.6.1-1
+- Update to 3.6.1
+
 * Fri Mar 22 2019 RDO <dev@lists.rdoproject.org> 3.6.0-1
 - Update to 3.6.0
 
