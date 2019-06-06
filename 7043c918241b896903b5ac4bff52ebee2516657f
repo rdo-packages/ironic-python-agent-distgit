@@ -1,0 +1,8 @@
+Code-Review+2: Dmitry Tantsur <dtantsur@protonmail.com>
+Workflow+1: Dmitry Tantsur <dtantsur@protonmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 06 Jun 2019 07:04:04 +0000
+Reviewed-on: https://review.rdoproject.org/r/21033
+Project: openstack/ironic-python-agent-distgit
+Branch: refs/heads/queens-rdo
