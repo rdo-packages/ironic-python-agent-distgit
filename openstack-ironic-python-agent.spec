@@ -24,6 +24,7 @@ URL:        https://github.com/openstack/ironic-python-agent
 
 Source0:    https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz
 Source1:    openstack-ironic-python-agent.service
+Source2:    ironic-python-agent-dist.conf
 
 BuildArch:  noarch
 BuildRequires:  python%{pyver}-setuptools
@@ -105,11 +106,13 @@ Requires: python-netifaces
 Requires: python-pint
 Requires: python-pyudev
 Requires: python-rtslib
+Requires: systemd-python
 %else
 Requires: python%{pyver}-netifaces
 Requires: python%{pyver}-pint
 Requires: python%{pyver}-pyudev
 Requires: python%{pyver}-rtslib
+Requires: python%{pyver}-systemd
 %endif
 
 %if 0%{?rhel} > 7
@@ -156,7 +159,8 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 mkdir -p %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 
-install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{buildroot}/%{_sysconfdir}/ironic-python-agent/agent.conf
+# Install distribution config
+install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/ironic-python-agent/ironic-python-agent-dist.conf
 
 %check
 
