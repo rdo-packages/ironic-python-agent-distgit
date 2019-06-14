@@ -12,6 +12,7 @@ URL:        https://github.com/openstack/ironic-python-agent
 
 Source0:    https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz
 Source1:    openstack-ironic-python-agent.service
+Source2:    ironic-python-agent-dist.conf
 
 BuildArch:  noarch
 BuildRequires:  python2-setuptools
@@ -97,6 +98,7 @@ Requires: python-rtslib
 Requires: python2-six
 Requires: python2-stevedore >= 1.20.0
 Requires: python-wsme
+Requires: systemd-python
 
 %description -n python2-ironic-python-agent
 Python library for ironic python agent.
@@ -134,7 +136,8 @@ Documentation for ironic python agent.
 mkdir -p %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 
-install -p -D -m 644 etc/ironic_python_agent/ironic_python_agent.conf.sample %{buildroot}/%{_sysconfdir}/ironic-python-agent/agent.conf
+# Install distribution config
+install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/ironic-python-agent/ironic-python-agent-dist.conf
 
 %check
 ostestr --path ironic_python_agent/tests/unit
