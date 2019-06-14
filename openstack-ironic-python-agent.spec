@@ -105,11 +105,13 @@ Requires: python-netifaces
 Requires: python-pint
 Requires: python-pyudev
 Requires: python-rtslib
+Requires: systemd-python
 %else
 Requires: python%{pyver}-netifaces
 Requires: python%{pyver}-pint
 Requires: python%{pyver}-pyudev
 Requires: python%{pyver}-rtslib
+Requires: python%{pyver}-systemd
 %endif
 
 %if 0%{?rhel} > 7
