@@ -22,6 +22,30 @@
       "revId": "5d7f8b8e7d3a91a2eb5fbf6d4cfd2110fb9aba92",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d2225d7_6c578d42",
+        "filename": "ironic-python-agent-dist.conf",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2019-06-17T13:59:40Z",
+      "side": 1,
+      "message": "These options are specific 1. to using systemd, 2. to the way we start our service.",
+      "parentUuid": "850545f9_197caf4b",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "5d7f8b8e7d3a91a2eb5fbf6d4cfd2110fb9aba92",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
