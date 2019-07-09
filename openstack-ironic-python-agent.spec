@@ -172,6 +172,7 @@ stestr-%{pyver} --test-path ironic_python_agent/tests/unit run
 %license LICENSE
 %config(noreplace) %attr(-,root,root) %{_sysconfdir}/ironic-python-agent
 %{_bindir}/ironic-python-agent
+%{_bindir}/ironic-collect-introspection-data
 %{_unitdir}/openstack-ironic-python-agent.service
 
 %files -n python%{pyver}-ironic-python-agent
