@@ -1,0 +1,9 @@
+Verified-1: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Verified+2: Javier Peña <jpena@redhat.com>
+Workflow+1: Javier Peña <jpena@redhat.com>
+Submitted-by: Javier Peña <jpena@redhat.com>
+Submitted-at: Thu, 05 Dec 2019 09:34:50 +0000
+Reviewed-on: https://review.rdoproject.org/r/23952
+Project: openstack/ironic-python-agent-distgit
+Branch: refs/heads/rpm-master
