@@ -196,3 +196,4 @@ stestr-%{pyver} --test-path ironic_python_agent/tests/unit run
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+
