@@ -46,9 +46,8 @@ BuildRequires: python%{pyver}-oslotest
 BuildRequires: python%{pyver}-pecan
 BuildRequires: python%{pyver}-psutil
 BuildRequires: python%{pyver}-requests
-BuildRequires: python%{pyver}-six
 BuildRequires: python%{pyver}-stevedore
-BuildRequires: python%{pyver}-wsme
+BuildRequires: python%{pyver}-werkzeug
 BuildRequires: openstack-macros
 BuildRequires: python%{pyver}-stestr
 # Handle python2 exception
@@ -97,9 +96,8 @@ Requires: python%{pyver}-oslo-utils >= 3.33.0
 Requires: python%{pyver}-pecan
 Requires: python%{pyver}-psutil
 Requires: python%{pyver}-requests
-Requires: python%{pyver}-six
 Requires: python%{pyver}-stevedore >= 1.20.0
-Requires: python%{pyver}-wsme
+Requires: python%{pyver}-werkzeug
 # Handle python2 exception
 %if %{pyver} == 2
 Requires: python-netifaces
