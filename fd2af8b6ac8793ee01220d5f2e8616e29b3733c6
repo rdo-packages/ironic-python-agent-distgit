@@ -1,0 +1,8 @@
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Verified+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Submitted-by: Yatin Karel <ykarel@redhat.com>
+Submitted-at: Thu, 12 Mar 2020 13:31:51 +0000
+Reviewed-on: https://review.rdoproject.org/r/24060
+Project: openstack/ironic-python-agent-distgit
+Branch: refs/heads/rpm-master
