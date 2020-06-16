@@ -94,6 +94,7 @@ Python library for ironic python agent.
 %package -n python-ironic-python-agent-doc
 Summary:    Documentation for ironic python agent.
 BuildRequires: python3-sphinx
+BuildRequires: python3-sphinxcontrib-apidoc
 BuildRequires: python3-sphinxcontrib-httpdomain
 BuildRequires: python3-sphinxcontrib-pecanwsme
 BuildRequires: python3-openstackdocstheme
@@ -116,6 +117,7 @@ Documentation for ironic python agent.
 %{py3_install}
 
 %if 0%{?with_doc}
+export PBR_VERSION=%{version}
 export PYTHONPATH=.
 sphinx-build -b html -d doc/build/doctrees doc/source doc/build/html
 # Remove build docs leftovers
@@ -163,4 +165,3 @@ stestr --test-path ironic_python_agent/tests/unit run
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
-
