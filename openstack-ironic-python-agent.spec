@@ -164,3 +164,4 @@ stestr --test-path ironic_python_agent/tests/unit run
 
 %changelog
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic-python-agent/commit/?id=1609551a907a7cffee2a80b5a94847f34fbf74bd
