@@ -63,24 +63,24 @@ as of the Kilo OpenStack release.
 Summary:    Python library for the ironic python agent.
 %{?python_provide:%python_provide python3-ironic-python-agent}
 
-Requires: python3-pbr
-Requires: python3-eventlet
+Requires: python3-eventlet >= 0.18.2
 Requires: python3-ironic-lib >= 4.1.0
-Requires: python3-oslo-config >= 2:5.2.0
+Requires: python3-netifaces >= 0.10.4
 Requires: python3-oslo-concurrency >= 3.26.0
+Requires: python3-oslo-config >= 2:5.2.0
 Requires: python3-oslo-log >= 3.36.0
 Requires: python3-oslo-serialization >= 2.18.0
 Requires: python3-oslo-service >= 1.24.0
 Requires: python3-oslo-utils >= 3.33.0
-Requires: python3-psutil
-Requires: python3-requests
+Requires: python3-pbr >== 2.0.0
+Requires: python3-pint >= 0.5
+Requires: python3-psutil >= 3.2.2
+Requires: python3-pyudev >= 0.18
+Requires: python3-requests >= 2.14.2
+Requires: python3-rtslib >= 2.1.65
 Requires: python3-stevedore >= 1.20.0
-Requires: python3-werkzeug
-Requires: python3-netifaces
-Requires: python3-pint
-Requires: python3-pyudev
-Requires: python3-rtslib
 Requires: python3-systemd
+Requires: python3-werkzeug >= 0.15.0
 
 %if 0%{?rhel} > 7
 # RHEL8 requires a network-scripts package for ifcfg backwards compatibility
