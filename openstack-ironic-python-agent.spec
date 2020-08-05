@@ -208,3 +208,4 @@ stestr-%{pyver} --test-path ironic_python_agent/tests/unit run
 * Mon Sep 30 2019 RDO <dev@lists.rdoproject.org> 5.0.0-1
 - Update to 5.0.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic-python-agent/commit/?id=8d0c10ccc13318abba87f938aa6a3533e4a97a04
