@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e3f1224f_e6f9e8e6",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2020-09-17T08:30:40Z",
+      "side": 1,
+      "message": "tenacity must also be added as BuildRequires:\n\nhttps://logserver.rdoproject.org/73/29373/1/check/DLRN-build-tripleo-centos8/9304a48/job-output.txt",
+      "range": {
+        "startLine": 84,
+        "startChar": 1,
+        "endLine": 84,
+        "endChar": 26
+      },
+      "revId": "2a5b29ede484bb855ed70a2baf0beac2e0809f8c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
