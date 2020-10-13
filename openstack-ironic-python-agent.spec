@@ -64,6 +64,7 @@ as of the Kilo OpenStack release.
 Summary:    Python library for the ironic python agent.
 %{?python_provide:%python_provide python3-ironic-python-agent}
 
+Requires: python3-cryptography >= 2.3
 Requires: python3-eventlet >= 0.18.2
 Requires: python3-ironic-lib >= 4.1.0
 Requires: python3-netifaces >= 0.10.4
