@@ -79,7 +79,7 @@ Summary:    Python library for the ironic python agent.
 
 Requires: python3-cryptography >= 2.3
 Requires: python3-eventlet >= 0.18.2
-Requires: python3-ironic-lib >= 4.1.0
+Requires: python3-ironic-lib >= 4.5.0
 Requires: python3-netifaces >= 0.10.4
 Requires: python3-oslo-concurrency >= 3.26.0
 Requires: python3-oslo-config >= 2:5.2.0
