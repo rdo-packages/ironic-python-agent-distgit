@@ -106,6 +106,17 @@ Requires:   network-scripts
 %description -n python3-ironic-python-agent
 Python library for ironic python agent.
 
+%package -n python3-ironic-python-agent-tests
+Summary:    Python library for the ironic python agent - Tests.
+Requires: python3-ironic-python-agent = %{version}-%{release}
+
+Requires: python3-testtools
+Requires: python3-oslotest
+Requires: python3-stestr
+
+%description -n python3-ironic-python-agent-tests
+Tests for Python library for ironic python agent.
+
 %if 0%{?with_doc}
 %package -n python-ironic-python-agent-doc
 Summary:    Documentation for ironic python agent.
@@ -167,7 +178,12 @@ stestr --test-path ironic_python_agent/tests/unit run
 %files -n python3-ironic-python-agent
 %license LICENSE
 %{python3_sitelib}/ironic_python_agent
+%exclude %{python3_sitelib}/ironic_python_agent/tests
 %{python3_sitelib}/ironic_python_agent*.egg-info
+
+%files -n python3-ironic-python-agent-tests
+%license LICENSE
+%{python3_sitelib}/ironic_python_agent/tests
 
 %if 0%{?with_doc}
 %files -n python-ironic-python-agent-doc
