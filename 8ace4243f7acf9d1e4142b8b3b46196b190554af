@@ -1,0 +1,8 @@
+Workflow+1: Dmitry Tantsur <dtantsur@protonmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Riccardo Pittau <elfosardo@gmail.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 19 Jul 2021 15:27:52 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-python-agent-distgit/+/33368
+Project: openstack/ironic-python-agent-distgit
+Branch: refs/heads/rpm-master
