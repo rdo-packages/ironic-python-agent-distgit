@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035
 %{?!_licensedir:%global license %%doc}
 %{!?upstream_version: %global upstream_version %{version}}
 
@@ -8,7 +8,7 @@
 
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
-Version:    7.0.1
+Version:    7.0.2
 Release:    1%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
@@ -185,6 +185,9 @@ stestr --test-path ironic_python_agent/tests/unit run
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+* Thu Aug 26 2021 RDO <dev@lists.rdoproject.org> 7.0.2-1
+- Update to 7.0.2
+
 * Thu Apr 29 2021 RDO <dev@lists.rdoproject.org> 7.0.1-1
 - Update to 7.0.1
 
