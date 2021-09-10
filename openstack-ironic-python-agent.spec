@@ -55,7 +55,6 @@ BuildRequires: python3-stestr
 BuildRequires: python3-netifaces
 BuildRequires: python3-pint
 BuildRequires: python3-pyudev
-BuildRequires: python3-rtslib
 BuildRequires: python3-tenacity
 
 Requires: python3-ironic-python-agent = %{version}-%{release}
@@ -92,7 +91,6 @@ Requires: python3-pint >= 0.5
 Requires: python3-psutil >= 3.2.2
 Requires: python3-pyudev >= 0.18
 Requires: python3-requests >= 2.14.2
-Requires: python3-rtslib >= 2.1.65
 Requires: python3-stevedore >= 1.20.0
 Requires: python3-systemd
 Requires: python3-werkzeug >= 1.0.1
@@ -101,6 +99,7 @@ Requires: python3-tenacity >= 6.2.0
 %if 0%{?rhel} == 8
 # RHEL8 requires a network-scripts package for ifcfg backwards compatibility
 Requires:   network-scripts
+Requires:   python3-importlib-metadata >= 1.7.0
 %endif
 
 %description -n python3-ironic-python-agent
