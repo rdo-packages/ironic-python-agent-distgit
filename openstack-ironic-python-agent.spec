@@ -78,14 +78,15 @@ Summary:    Python library for the ironic python agent.
 
 Requires: python3-cryptography >= 2.3
 Requires: python3-eventlet >= 0.18.2
-Requires: python3-ironic-lib >= 4.7.1
+Requires: python3-importlib-metadata >= 1.7.0
+Requires: python3-ironic-lib >= 5.1.0
 Requires: python3-netifaces >= 0.10.4
 Requires: python3-oslo-concurrency >= 3.26.0
 Requires: python3-oslo-config >= 2:5.2.0
 Requires: python3-oslo-log >= 3.36.0
 Requires: python3-oslo-serialization >= 2.18.0
 Requires: python3-oslo-service >= 1.24.0
-Requires: python3-oslo-utils >= 3.33.0
+Requires: python3-oslo-utils >= 3.34.0
 Requires: python3-pbr >= 2.0.0
 Requires: python3-pint >= 0.5
 Requires: python3-psutil >= 3.2.2
@@ -98,8 +99,7 @@ Requires: python3-tenacity >= 6.2.0
 
 %if 0%{?rhel} == 8
 # RHEL8 requires a network-scripts package for ifcfg backwards compatibility
-Requires:   network-scripts
-Requires:   python3-importlib-metadata >= 1.7.0
+Requires: network-scripts
 %endif
 
 %description -n python3-ironic-python-agent
