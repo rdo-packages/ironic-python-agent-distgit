@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ba826ef1_2d32cd97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2022-01-24T09:45:59Z",
+      "side": 1,
+      "message": "should be fixed by https://review.rdoproject.org/r/c/openstack/ironic-python-agent-distgit/+/38454",
+      "revId": "f1f3bbe651c0c8f1dcea17d3a0c2f4225eb1e3ec",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
