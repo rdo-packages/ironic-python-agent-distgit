@@ -16,6 +16,24 @@
       "message": "Thanks for the fix.\n\nFor future cases, note that dlrn creates reviews automatically when it detects a FTBFS, like https://review.rdoproject.org/r/c/openstack/ironic-python-agent-distgit/+/38396 . In cases like this one is preferable to ammend existing reviews that creating new ones.\n",
       "revId": "ad40e348b31a32efe468ee1055022efcb4888ba9",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "11fd58f1_75590d18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2022-01-24T15:27:41Z",
+      "side": 1,
+      "message": "will do, thanks!",
+      "parentUuid": "96c7eaee_2c9cbffd",
+      "revId": "ad40e348b31a32efe468ee1055022efcb4888ba9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
