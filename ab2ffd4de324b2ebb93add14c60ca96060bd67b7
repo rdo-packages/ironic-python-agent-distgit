@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29fe5633_9679a61f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-01-25T14:50:07Z",
+      "side": 1,
+      "message": "@rpittau do you plan to release ironic-python-agent-bugfix-8.2.1.tar.gz ?\nI see tag 8.2.1 is no yet present in upstream repo tree",
+      "revId": "ab2ffd4de324b2ebb93add14c60ca96060bd67b7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
