@@ -34,6 +34,24 @@
       "parentUuid": "29fe5633_9679a61f",
       "revId": "ab2ffd4de324b2ebb93add14c60ca96060bd67b7",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40f7c208_6ae92f91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2022-01-26T16:40:08Z",
+      "side": 1,
+      "message": "this is due to an issue on gerrit, it\u0027ll be fixed soon",
+      "parentUuid": "9e851797_5509669a",
+      "revId": "ab2ffd4de324b2ebb93add14c60ca96060bd67b7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
