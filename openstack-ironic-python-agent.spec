@@ -94,13 +94,16 @@ Requires: python3-pyudev >= 0.18
 Requires: python3-requests >= 2.14.2
 Requires: python3-stevedore >= 1.20.0
 Requires: python3-systemd
-Requires: python3-werkzeug >= 1.0.1
+Requires: python3-werkzeug >= 2.0.0
 Requires: python3-tenacity >= 6.2.0
 Requires: python3-tooz >= 2.7.2
 
 %if 0%{?rhel} == 8
 # RHEL8 requires a network-scripts package for ifcfg backwards compatibility
 Requires: network-scripts
+%endif
+
+%if "%{?python3_version}" < "3.8"
 Requires: python3-importlib-metadata >= 1.7.0
 %endif
 
