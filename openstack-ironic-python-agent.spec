@@ -94,7 +94,7 @@ Requires: python3-pyudev >= 0.18
 Requires: python3-requests >= 2.14.2
 Requires: python3-stevedore >= 1.20.0
 Requires: python3-systemd
-Requires: python3-werkzeug >= 1.0.1
+Requires: python3-werkzeug >= 2.0.0
 Requires: python3-tenacity >= 6.2.0
 Requires: python3-tooz >= 2.7.2
 
