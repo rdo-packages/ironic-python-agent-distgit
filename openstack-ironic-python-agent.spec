@@ -101,6 +101,9 @@ Requires: python3-tooz >= 2.7.2
 %if 0%{?rhel} == 8
 # RHEL8 requires a network-scripts package for ifcfg backwards compatibility
 Requires: network-scripts
+%endif
+
+%if "%{?python3_version}" < "3.8"
 Requires: python3-importlib-metadata >= 1.7.0
 %endif
 
