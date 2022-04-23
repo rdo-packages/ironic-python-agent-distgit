@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da0086b7_68f2f8fb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2022-04-23T00:01:19Z",
+      "side": 1,
+      "message": "gotta love chicken-n-egg\nI\u0027m combining this with https://review.rdoproject.org/r/c/openstack/ironic-python-agent-distgit/+/41850",
+      "revId": "ca8c37529f4992f38680bf4d02ec30f327f8e135",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
