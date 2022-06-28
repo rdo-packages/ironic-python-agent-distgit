@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0003b034_2e423a11",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2022-06-28T08:24:40Z",
+      "side": 1,
+      "message": "ironic-python-agent removed compatibility with Python 3.6 in https://review.opendev.org/c/openstack/ironic-python-agent/+/846782",
+      "revId": "5c828ef98581a65b4e693e4a278529826fbffdb6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
