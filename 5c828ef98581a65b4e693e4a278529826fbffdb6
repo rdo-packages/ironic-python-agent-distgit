@@ -16,6 +16,24 @@
       "message": "ironic-python-agent removed compatibility with Python 3.6 in https://review.opendev.org/c/openstack/ironic-python-agent/+/846782",
       "revId": "5c828ef98581a65b4e693e4a278529826fbffdb6",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f8215ed_b6eeb7dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-06-28T09:10:37Z",
+      "side": 1,
+      "message": "Yes, we are removing centos8 from RDO for master. We hope to get this done in the next weeks. Until then, we\u0027ve agreed to just let failed packages in centos8 as is and don\u0027t pin to avoid impacting packages on centos9. No action is needed.",
+      "parentUuid": "0003b034_2e423a11",
+      "revId": "5c828ef98581a65b4e693e4a278529826fbffdb6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
