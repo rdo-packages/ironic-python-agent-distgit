@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dd59ee39_f584e6de",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-09-13T09:32:02Z",
+      "side": 1,
+      "message": "can be removed here too",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 1
+      },
+      "revId": "1c56d9e8fb2e30843ffeae7504adef3c0c0d5154",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
