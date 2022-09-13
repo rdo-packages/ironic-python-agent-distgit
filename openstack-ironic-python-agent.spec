@@ -41,7 +41,6 @@ BuildRequires: python3-mock
 BuildRequires: python3-oslo-config
 BuildRequires: python3-oslo-concurrency
 BuildRequires: python3-oslo-log
-BuildRequires: python3-oslo-serialization
 BuildRequires: python3-oslo-service
 BuildRequires: python3-oslo-utils
 BuildRequires: python3-oslotest
@@ -83,8 +82,7 @@ Requires: python3-ironic-lib >= 5.1.0
 Requires: python3-netifaces >= 0.10.4
 Requires: python3-oslo-concurrency >= 3.26.0
 Requires: python3-oslo-config >= 2:5.2.0
-Requires: python3-oslo-log >= 3.36.0
-Requires: python3-oslo-serialization >= 2.18.0
+Requires: python3-oslo-log >= 4.6.1
 Requires: python3-oslo-service >= 1.24.0
 Requires: python3-oslo-utils >= 3.34.0
 Requires: python3-pbr >= 2.0.0
