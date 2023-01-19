@@ -8,7 +8,7 @@
 
 Name:       openstack-ironic-python-agent
 Summary:    A python agent for provisioning and deprovisioning bare metal servers
-Version:    8.2.2
+Version:    8.2.3
 Release:    1%{?dist}
 License:    ASL 2.0
 URL:        https://github.com/openstack/ironic-python-agent
@@ -200,6 +200,9 @@ stestr --test-path ironic_python_agent/tests/unit run
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+* Thu Jan 19 2023 RDO <dev@lists.rdoproject.org> 8.2.3-1
+- Update to 8.2.3
+
 * Mon Nov 07 2022 RDO <dev@lists.rdoproject.org> 8.2.2-1
 - Update to 8.2.2
 
