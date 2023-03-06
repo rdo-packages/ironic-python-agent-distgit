@@ -101,10 +101,6 @@ Requires: python3-tooz >= 2.7.2
 Requires: network-scripts
 %endif
 
-%if "%{?python3_version}" < "3.8"
-Requires: python3-importlib-metadata >= 1.7.0
-%endif
-
 %description -n python3-ironic-python-agent
 Python library for ironic python agent.
 
