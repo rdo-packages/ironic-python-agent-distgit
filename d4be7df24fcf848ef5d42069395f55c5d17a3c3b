@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9884c601_a41d211b",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-08-02T12:28:37Z",
+      "side": 0,
+      "message": "we need to keep it as it\u0027s not in upstream code. It was added in this patch [1]\n\n[1] https://review.rdoproject.org/r/c/openstack/ironic-python-agent-distgit/+/21142",
+      "range": {
+        "startLine": 94,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 5
+      },
+      "revId": "d4be7df24fcf848ef5d42069395f55c5d17a3c3b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
