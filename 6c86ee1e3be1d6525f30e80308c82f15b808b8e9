@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f6eaeada_412753f2",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-08-03T10:44:05Z",
+      "side": 1,
+      "message": "rhel8 is not longer supported in bobcat, we can clean this dep",
+      "range": {
+        "startLine": 62,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 6
+      },
+      "revId": "6c86ee1e3be1d6525f30e80308c82f15b808b8e9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "faa24dfc_540daf87",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-08-03T10:44:05Z",
+      "side": 1,
+      "message": "some files are dissapearing, let\u0027s add -S git to autosetup",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 19
+      },
+      "revId": "6c86ee1e3be1d6525f30e80308c82f15b808b8e9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
