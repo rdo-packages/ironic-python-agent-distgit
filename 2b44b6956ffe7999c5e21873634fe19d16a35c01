@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d66f2192_82881ead",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2024-02-08T19:02:09Z",
+      "side": 1,
+      "message": "Looks like it couldn\u0027t find python3-pbr which seems more like a packaging/pipeline issue unrelated to the commit.",
+      "revId": "2b44b6956ffe7999c5e21873634fe19d16a35c01",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
