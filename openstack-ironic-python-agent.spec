@@ -38,8 +38,9 @@ BuildRequires:  /usr/bin/gpgv2
 BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  systemd
-BuildRequires: openstack-macros
-Requires: python3-ironic-python-agent = %{version}-%{release}
+BuildRequires:  openstack-macros
+BuildRequires:  qemu-img
+Requires:       python3-ironic-python-agent = %{version}-%{release}
 %{?systemd_requires}
 
 %description
@@ -58,9 +59,11 @@ as of the Kilo OpenStack release.
 Summary:    Python library for the ironic python agent.
 
 Requires: python3-systemd
+Requires: qemu-img
 
 %description -n python3-ironic-python-agent
 Python library for ironic python agent.
+
 
 %package -n python3-ironic-python-agent-tests
 Summary:    Python library for the ironic python agent - Tests.
