@@ -38,8 +38,10 @@ BuildRequires:  /usr/bin/gpgv2
 BuildRequires:  python3-devel
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  systemd
-BuildRequires: openstack-macros
-Requires: python3-ironic-python-agent = %{version}-%{release}
+BuildRequires:  openstack-macros
+BuildRequires:  qemu-img
+Requires:       python3-ironic-python-agent = %{version}-%{release}
+Requires:       qemu-img
 %{?systemd_requires}
 
 %description
@@ -166,3 +168,4 @@ install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/ironic-python-agent/
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic-python-agent/commit/e303a369dce6c4c5dd0402701b020888396406f3
