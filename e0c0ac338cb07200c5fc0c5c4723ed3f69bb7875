@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b7dc84a1_88fb5583",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-09-05T12:48:26Z",
+      "side": 1,
+      "message": "This line should go inside %package -n python3-ironic-python-agent section (e.g after l.62) as it\u0027s the python RPM itself that needs the requirement at runtime",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 1
+      },
+      "revId": "e0c0ac338cb07200c5fc0c5c4723ed3f69bb7875",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7136a362_e03475dd",
+        "filename": "openstack-ironic-python-agent.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-09-05T12:48:26Z",
+      "side": 1,
+      "message": "should be removed",
+      "range": {
+        "startLine": 171,
+        "startChar": 0,
+        "endLine": 171,
+        "endChar": 30
+      },
+      "revId": "e0c0ac338cb07200c5fc0c5c4723ed3f69bb7875",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
