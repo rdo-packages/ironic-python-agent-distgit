@@ -90,7 +90,7 @@ Documentation for ironic python agent.
 %if 0%{?sources_gpg} == 1
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
-%autosetup -v -p 1 -n ironic-python-agent-%{upstream_version} -S git
+%autosetup -v -p 1 -n %{tarsources}-python-agent-%{upstream_version} -S git
 
 
 sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
