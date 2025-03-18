@@ -2,6 +2,8 @@
 %global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %{?!_licensedir:%global license %%doc}
 %{!?upstream_version: %global upstream_version %{version}}
+%{?dlrn: %global tarsources ironic-python-agent}
+%{!?dlrn: %global tarsources ironic_python_agent}
 # we are excluding some BRs from automatic generator
 %global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
 # Exclude sphinx from BRs if docs are disabled
@@ -19,12 +21,12 @@ Release:    XXX
 License:    Apache-2.0
 URL:        https://github.com/openstack/ironic-python-agent
 
-Source0:    https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz
+Source0:    https://tarballs.openstack.org/%{sname}/%{tarsources}-%{upstream_version}.tar.gz
 Source1:    openstack-ironic-python-agent.service
 Source2:    ironic-python-agent-dist.conf
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
-Source101:        https://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz.asc
+Source101:        https://tarballs.openstack.org/%{sname}/%{tarsources}-%{upstream_version}.tar.gz.asc
 Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
