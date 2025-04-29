@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6535e7a_5d028ae2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2025-04-29T21:11:10Z",
+      "side": 1,
+      "message": "This failure is caused by adding package cheroot, which has just become an approved openstack dependency:\n\nhttps://review.opendev.org/c/openstack/requirements/+/947727\n\nThis will be resolved by RDO packaging python3-cheroot",
+      "revId": "e69808a2dc66a82daa88ab37bbf7868fa6ebfbcf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
