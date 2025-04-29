@@ -171,3 +171,4 @@ install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/ironic-python-agent/
 %systemd_postun_with_restart openstack-ironic-python-agent.service
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic-python-agent/commit/c03021fee25f47ccd2c04e0d91341cd829c9e600
