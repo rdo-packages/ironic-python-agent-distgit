@@ -177,3 +177,4 @@ install -p -D -m 640 %{SOURCE2} %{buildroot}/%{_sysconfdir}/ironic-python-agent/
 * Tue Mar 18 2025 RDO <dev@lists.rdoproject.org> 10.1.0-1
 - Update to 10.1.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic-python-agent/commit/197a525dfd0534755311aef988d502536b526fc0
